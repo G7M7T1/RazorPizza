@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - RazorPizza</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/RazorPizza.styles.css" asp-append-version="true"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Silkscreen', cursive;">
+<header aria-label="Site Header" class="bg-gray-900 text-white shadow-lg sticky top-0">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+            <div class="flex-1 md:flex md:items-center md:gap-12 text-white">
+                <a class="block text-white" asp-page="Index">
+                    <span class="sr-only">Pizza</span>
+                    <img class="h-8" src="images/Pizza.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="md:flex md:items-center md:gap-12">
+                <nav aria-label="Site Nav" class="hidden md:block">
+                    <ul class="flex items-center gap-6 text-sm">
+                        <li>
+                            <a
+                                class="text-white transition hover:text-gray-100/75"
+                                asp-page="Index">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="text-white transition hover:text-gray-100/75"
+                                asp-page="Pizza">
+                                Pizza
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="text-white transition hover:text-gray-100/75"
+                                asp-page="Privacy">
+                                Privacy
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div>
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+
+<footer class="p-4 shadow md:px-6 md:py-8 bg-gray-900">
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+            <img src="images/Pizza.png" class="mr-3 h-8" alt="Flowbite Logo">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">RazorPizza</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm sm:mb-0 text-gray-400">
+            <li>
+                <a asp-page="Pizza" class="mr-4 hover:underline md:mr-6 ">Pizza</a>
+            </li>
+            <li>
+                <a asp-page="Privacy" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+        </ul>
+    </div>
+    <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8">
+    <span class="block text-sm sm:text-center text-gray-400">
+        © 2022 <a href="https://g7m7t1.com" class="hover:underline">RazorPizza™</a>. All Rights Reserved.
+    </span>
+</footer>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,80 @@
+@page
+@model RazorPizza.Pages.Forms.CustomPizza
+
+<div class="bg-gray-900">
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 bg-gray-900">
+        <div class="mx-auto max-w-lg">
+            <h1 class="text-center text-2xl font-bold text-indigo-500 sm:text-3xl">
+                Get Pizza today
+            </h1>
+
+            <p class="mx-auto mt-4 max-w-md text-center text-gray-100">
+                make your own pizza will be nice
+            </p>
+
+            <form action="" class="mt-6 mb-0 space-y-4 rounded-lg p-8 shadow-2xl">
+                <p class="text-lg font-medium text-gray-100 text-center">Create Pizza</p>
+
+                <div>
+                    <label class="text-sm font-medium">Pizza Name</label>
+
+                    <div class="relative mt-1">
+                        <input asp-for="Pizza.PizzaName" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm" placeholder="Enter Pizza Name"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Image Title</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input asp-for="Pizza.ImageTitle" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm" placeholder="Enter Image Title"/>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.ExtraCheese" id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Extra Cheese</label>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.ExtraSauce" id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-2" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Extra Sauce</label>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.Peperoni" id="bordered-checkbox-3" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-3" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Peperoni</label>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.Mushroom" id="bordered-checkbox-4" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-4" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Mushroom</label>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.Pineapple" id="bordered-checkbox-5" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-5" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Pineapple</label>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.Ham" id="bordered-checkbox-6" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-6" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Ham</label>
+                </div>
+                
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="Pizza.Beef" id="bordered-checkbox-7" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600">
+                    <label for="bordered-checkbox-7" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Beef</label>
+                </div>
+                
+                
+
+                <button
+                    type="submit"
+                    class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">
+                    Checkout
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
