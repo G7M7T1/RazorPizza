@@ -18,7 +18,7 @@
 
     <div class="flex  justify-center">
         <div class="max-w-screen-2xl w-full">
-            <div class="Box-Area grid gap-6 mx-12 mt-16 pb-12 md:grid-cols-1 lg:grid-cols-2">
+            <div class="Box-Area grid gap-6 mx-12 mt-16 pb-6 md:grid-cols-1 lg:grid-cols-2">
                 <div class="Box-Image Box-Image-1 flex flex-col justify-center">
                     <div class="mx-12">
                         <h1 class="font-black text-5xl pb-3">Cheeze Pizza</h1>
@@ -29,11 +29,11 @@
 
                 <div class="grid grid-row-2 gap-6">
                     <div class="Box-Image Box-Image-2 flex flex-col items-center justify-center">
-                        <h3 class="text-3xl font-bold pb-3">Get Our Email Post</h3>
+                        <h3 class="text-3xl font-bold pb-3 Text-Shadow">Get Our Email Post</h3>
 
                         <form class="flex items-center">
-                            <div class="relative">
-                                <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5" placeholder="Enter Your Email" required="">
+                            <div>
+                                <input type="email" class="bg-gray-50 text-gray-900 text-sm rounded-lg w-full p-2.5" placeholder="Enter Your Email" required="">
                             </div>
                             <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-red-600 rounded-lg border">
                                 <svg aria-hidden="true" class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -43,15 +43,86 @@
                             </button>
                         </form>
                     </div>
+
                     <div class="Box-Image Box-Image-3 flex items-center justify-center">
-                        <h3 class="text-5xl font-black">Check <span class="text-red-600">Menu</span></h3>
+                        <h3 class="text-5xl font-black">
+                            <span style="text-shadow: 3px 3px rgba(220,38,38,1);">Check</span>
+                            <span style="text-shadow: 3px 3px rgba(255,255,255,1)" class="text-red-600">Menu</span>
+                        </h3>
                     </div>
                 </div>
             </div>
 
             <div class="Make-Own mx-12 mt-1 mb-12 flex flex-col justify-center items-center">
-                <h1 class="font-black text-5xl">Make Your Own Pizza With Us</h1>
+                <h1 class="font-black text-5xl Text-Shadow">Make Your Own Pizza With Us</h1>
+                <button class="rounded-lg px-12 py-3 bg-red-600 text-white mt-6">Try It Now</button>
             </div>
+
+            <div class="pt-20 pb-6 ">
+                <h1 class="text-red-600 text-5xl font-extrabold text-center Main-Title pb-3 Text-Shadow-White">
+                    Buy Our Popular Pizza
+                </h1>
+
+                <h4 class="text-white text-6xl font-extrabold text-center Main-Title Text-Shadow-Red">
+                    We Make Best Pizza In This World
+                </h4>
+            </div>
+
+            <div class="Pizza-List grid sm:grid-cols-2 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
+
+                <div class="flex justify-center">
+                    <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                        <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/Pepperoni.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                        <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                            <div class="space-y-2">
+                                <h2 class="text-2xl font-semibold tracking-wide text-center">PEPPERONI</h2>
+                                <p class="text-center">The all-time favourite - It doesn't get any more iconic than this. Savoury pepperoni, homestyle sauce</p>
+                            </div>
+                            <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $9.84</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                        <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/12830.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                        <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                            <div class="space-y-2">
+                                <h2 class="text-2xl font-semibold tracking-wide text-center">HOT HONEY</h2>
+                                <p class="text-center">Hot + Honey = The Honey Moon. Hot honey base with six cheese blend, pepperoni and hot peppers</p>
+                            </div>
+                            <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $14.94</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                        <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/12820.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                        <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                            <div class="space-y-2">
+                                <h2 class="text-2xl font-semibold tracking-wide text-center">BUFFALO CHICKEN</h2>
+                                <p class="text-center">BBQ Chicken, red onions, parmesan cheese on a Buffalo sauce base. Wing night just got a little more interesting</p>
+                            </div>
+                            <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $16.59</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                        <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/13994.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                        <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                            <div class="space-y-2">
+                                <h2 class="text-2xl font-semibold tracking-wide text-center">CHICKEN SHAWARMA</h2>
+                                <p class="text-center">This gourmet pizza features chicken shawarma, red onions, Roma tomatoes, mozzarella cheese Creamy Garlic sauce</p>
+                            </div>
+                            <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $15.44</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
