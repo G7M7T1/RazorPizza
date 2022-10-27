@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx tailwindcss -i ./RazorPizza/wwwroot/css/tailwind.css -o ./RazorPizza/wwwroot/css/site.css --watch",
-    "build": "tailwind build ./RazorPizza/wwwroot/css/tailwind.css -o ./RazorPizza/wwwroot/css/site.css"
+    "build": "tailwind build ./RazorPizza/wwwroot/css/tailwind.css -o ./RazorPizza/wwwroot/css/site.css",
+    "scss": "sass .\\RazorPizza\\wwwroot\\css\\style.scss:style.css --watch"
   },
   "repository": {
     "type": "git",

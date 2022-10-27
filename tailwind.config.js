@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{cshtml,js}",
-    "./RazorPizza/Pages/*.{cshtml,js}",
-    "./RazorPizza/Pages/**/*.{cshtml,js}",
-    "./RazorPizza/wwwroot/js/*.{cshtml,js}"
+    "./src/**/*.{razor,html,cshtml,js}",
+    "./RazorPizza/Pages/*.{razor,html,cshtml,js}",
+    "./RazorPizza/Pages/**/*.{razor,html,cshtml,js}",
+    "./RazorPizza/wwwroot/js/*.{razor,html,cshtml,js}"
   ],
   theme: {
     extend: {},
