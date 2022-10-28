@@ -97,6 +97,11 @@ $Title-Font: 'Lobster', cursive;
   @include ImageCenter;
 }
 
+.Other-BG {
+  background-image: url("https://images.unsplash.com/photo-1616141032335-7e6b413f93ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  @include ImageCenter;
+}
+
 .Other-Test {
   margin: 0;
   padding: 0;
