@@ -7,14 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npx tailwindcss -i ./RazorPizza/wwwroot/css/tailwind.css -o ./RazorPizza/wwwroot/css/site.css --watch",
     "build": "tailwind build ./RazorPizza/wwwroot/css/tailwind.css -o ./RazorPizza/wwwroot/css/site.css",
-    "scss": "sass .\\RazorPizza\\wwwroot\\css\\style.scss:style.css --watch"
+    "scss": "sass --watch ./RazorPizza/wwwroot/css/style.scss ./RazorPizza/wwwroot/css/style.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/G7M7T1/RazorPizza.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "G7M7T1",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/G7M7T1/RazorPizza/issues"

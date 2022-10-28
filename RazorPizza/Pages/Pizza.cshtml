@@ -6,97 +6,110 @@
 @* <a class="nav-link text-dark" asp-page="Checkout/Checkout">Checkout</a> *@
 @* <a class="nav-link text-dark" asp-page="Checkout">Checkout</a> *@
 
-<section class="bg-gray-900 px-12 py-16">
-    <div class="container flex flex-col px-12 py-16 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-        <div class="w-full lg:w-1/2 pt-4">
-            <div class="lg:max-w-lg">
-                <h1 class="text-3xl font-bold tracking-wide text-white lg:text-5xl">
-                    Easiest way to create your own pizza
-                </h1>
+<section class="Pizza-BG text-white">
+    <div class="flex flex-col items-center">
+        <div class="container pt-20 pb-6 w-full">
+            <h1 class="text-red-600 text-5xl font-extrabold text-center Main-Title pb-3 Text-Shadow-White">
+                Get Pizza Today
+            </h1>
 
-                <div class="mt-8 space-y-5">
-                    <p class="flex items-center -mx-2 text-gray-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+            <h4 class="text-white text-6xl font-extrabold text-center Main-Title Text-Shadow-Red">
+                And Make Order AnyWhere
+            </h4>
+        </div>
 
-                        <span class="mx-2">Chooes you like</span>
-                    </p>
+        <div class="container px-6 py-8 mx-auto">
+            <h2 class="text-3xl font-semibold text-center capitalize lg:text-4xl text-white">Our Pizza</h2>
 
-                    <p class="flex items-center -mx-2 text-gray-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+            <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Bolognese.png" alt="img"/>
 
-                        <span class="mx-2">make all you like</span>
-                    </p>
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-200">Bolognese</h3>
+                    </div>
+                </div>
 
-                    <p class="flex items-center -mx-2 text-gray-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Carbonara.png" alt="img"/>
 
-                        <span class="mx-2">easy to send everywhere</span>
-                    </p>
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-200">Carbonara</h3>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Hawaiian.png" alt="img"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-200">Hawaiian</h3>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Mushroom.png" alt="img"/>
+
+                    <div class="mt-2">
+                        <h3 class="text-lg font-medium text-gray-200">Mushroom</h3>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="flex items-center justify-center w-full h-full lg:w-1/2">
-            <img class="object-cover w-full rounded-md lg:max-w-2xl" 
-                 src="images/Pizzas/Create.png" alt="photo">
-        </div>
-    </div>
-</section>
-
-<section class="bg-gray-900 pt-16">
-    
-    <div class="container px-6 py-8 mx-auto">
-        <h2 class="text-3xl font-semibold text-center capitalize lg:text-4xl text-white">Our Pizza</h2>
-
-        <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <div class="w-full max-w-xs text-center">
-                <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Bolognese.png" alt="img" />
-
-                <div class="mt-2">
-                    <h3 class="text-lg font-medium text-gray-200">Bolognese</h3>
-                </div>
-            </div>
-
-            <div class="w-full max-w-xs text-center">
-                <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Carbonara.png" alt="img" />
-
-                <div class="mt-2">
-                    <h3 class="text-lg font-medium text-gray-200">Carbonara</h3>
-                </div>
-            </div>
-
-            <div class="w-full max-w-xs text-center">
-                <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Hawaiian.png" alt="img" />
-
-                <div class="mt-2">
-                    <h3 class="text-lg font-medium text-gray-200">Hawaiian</h3>
-                </div>
-            </div>
-
-            <div class="w-full max-w-xs text-center">
-                <img class="object-cover object-center w-full h-56 mx-auto rounded-lg" src="images/Pizzas/Mushroom.png" alt="img" />
-
-                <div class="mt-2">
-                    <h3 class="text-lg font-medium text-gray-200">Mushroom</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="bg-gray-900 text-gray-100">
-    <div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
-        <h1 class="text-3xl font-bold leading-none sm:text-4xl">If you want you can
-            <span class="text-violet-400">make your own </span>pizza
-        </h1>
-        <div class="flex flex-wrap justify-center">
-            <a asp-page="Forms/CustomPizza" class="py-6 m-2 text-lg  rounded text-gray-50">Try It</a>
-        </div>
+        
+        <div class="Pizza-List grid sm:grid-cols-2 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
+        
+                        <div class="flex justify-center">
+                            <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                                <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/Pepperoni.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                                <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                                    <div class="space-y-2">
+                                        <h2 class="text-2xl font-semibold tracking-wide text-center">PEPPERONI</h2>
+                                        <p class="text-center">The all-time favourite - It doesn't get any more iconic than this. Savoury pepperoni, homestyle sauce</p>
+                                    </div>
+                                    <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $9.84</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="flex justify-center">
+                            <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                                <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/12830.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                                <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                                    <div class="space-y-2">
+                                        <h2 class="text-2xl font-semibold tracking-wide text-center">HOT HONEY</h2>
+                                        <p class="text-center">Hot + Honey = The Honey Moon. Hot honey base with six cheese blend, pepperoni and hot peppers</p>
+                                    </div>
+                                    <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $14.94</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="flex justify-center">
+                            <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                                <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/12820.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                                <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                                    <div class="space-y-2">
+                                        <h2 class="text-2xl font-semibold tracking-wide text-center">BUFFALO CHICKEN</h2>
+                                        <p class="text-center">BBQ Chicken, red onions, parmesan cheese on a Buffalo sauce base. Wing night just got a little more interesting</p>
+                                    </div>
+                                    <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $16.59</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="flex justify-center">
+                            <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
+                                <img src="https://storage.pizzapizza.ca/phx2/ppl_images/products/en/2x/13994.png?cache_key=27" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                                <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
+                                    <div class="space-y-2">
+                                        <h2 class="text-2xl font-semibold tracking-wide text-center">CHICKEN SHAWARMA</h2>
+                                        <p class="text-center">This gourmet pizza features chicken shawarma, red onions, Roma tomatoes, mozzarella cheese Creamy Garlic sauce</p>
+                                    </div>
+                                    <button type="button" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $15.44</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
     </div>
 </section>

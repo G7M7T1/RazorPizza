@@ -1,19 +1,41 @@
+// Import Font
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@mixin FlexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+@mixin ImageCenter {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Color
+$Red: rgb(220, 38, 38);
+$White: rgb(255, 255, 255);
+$Black: rgb(0, 0, 0);
+$Transparent : transparent;
+
+// Font Family
+$Main-Font: 'Josefin Sans', sans-serif;
+$Title-Font: 'Lobster', cursive;
+
 * {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: $Main-Font;
 }
 
 .Main-BG {
   background-image: url("https://images.unsplash.com/photo-1614723100188-65df627e4ada?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @include ImageCenter;
 }
 
 .Main-Title {
-  font-family: 'Lobster', cursive;
+  font-family: $Title-Font;
 }
 
 .Main-Text {
@@ -26,56 +48,57 @@
 
 .Box-Image-1 {
   background-image: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  @include ImageCenter;
   height: 500px;
   min-height: 300px;
 }
 
 .Box-Image-2 {
   background-image: url("https://images.unsplash.com/photo-1526991204058-9d45349da374?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  @include ImageCenter;
   height: 100%;
   min-height: 200px;
 }
 
 .Box-Image-3 {
   background-image: url("https://images.unsplash.com/photo-1618040996337-56904b7850b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
+  @include ImageCenter;
   height: 100%;
   min-height: 200px;
 }
 
 .Make-Own {
   background-image: url("https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include ImageCenter;
   height: 400px;
   min-height: 200px;
   border-radius: 20px;
 }
 
 .Text-Shadow {
-  text-shadow: 3px 3px rgba(220,38,38,1);
+  text-shadow: 3px 3px $Red;
 }
 
 .Text-Shadow-Red {
-  text-shadow: 3px 3px rgb(255, 0, 0);
+  text-shadow: 3px 3px $Red;
 }
 
 .Text-Shadow-White {
-  text-shadow: 3px 3px rgb(255, 255, 255);
+  text-shadow: 3px 3px $White;
 }
 
 .BG-Pizza {
   background-image: url("https://images.unsplash.com/photo-1505682750263-f3f9e519c565?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include ImageCenter;
+}
+
+.Pizza-BG {
+  background-image: url("https://images.unsplash.com/photo-1603074629126-89ba2fcbb889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  @include ImageCenter;
+}
+
+.Other-Test {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
