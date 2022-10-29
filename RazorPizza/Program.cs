@@ -1,4 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using RazorPizza.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Add DataBase Connect (Local)
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 // Add services to the container. // Add HotReload
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();

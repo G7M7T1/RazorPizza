@@ -93,6 +93,20 @@
   background-repeat: no-repeat;
 }
 
+.Other-BG-1 {
+  background-image: url("https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Other-BG-2 {
+  background-image: url("https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .Other-Test {
   margin: 0;
   padding: 0;

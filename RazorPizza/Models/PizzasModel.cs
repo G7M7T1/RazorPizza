@@ -4,6 +4,7 @@ public class PizzasModel
 {
     public string ImageTitle { get; set; }
     public string PizzaName { get; set; }
+    public string Description { get; set; }
     public float BasePrice { get; set; }
     public bool ExtraSauce { get; set; }
     public bool ExtraCheese { get; set; }
