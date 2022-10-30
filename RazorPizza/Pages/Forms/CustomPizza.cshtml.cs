@@ -8,32 +8,28 @@ public class CustomPizza : PageModel
 {
     [BindProperty]
     public PizzasModel Pizza { get; set; }
-    public float PizzaPrice { get; set; }
-    public float BasePrice { get; set; }
-    
+
     public void OnGet()
     {
     }
 
     public IActionResult OnPost()
     {
-        BasePrice = 8;
-        
-        PizzaPrice = BasePrice;
+        Pizza.BasePrice = 8;
 
-        if (Pizza.ExtraCheese) PizzaPrice += 5;
-        if (Pizza.ExtraSauce) PizzaPrice += 2;
-        if (Pizza.Peperoni) PizzaPrice += 3;
-        if (Pizza.Mushroom) PizzaPrice += 3;
-        if (Pizza.Pineapple) PizzaPrice += 3;
-        if (Pizza.Ham) PizzaPrice += 3;
-        if (Pizza.Beef) PizzaPrice += 5;
+        Pizza.FinalPrice += Pizza.BasePrice;
+
+        if (Pizza.ExtraCheese) Pizza.FinalPrice += 5;
+        if (Pizza.ExtraSauce) Pizza.FinalPrice += 2;
+        if (Pizza.Peperoni) Pizza.FinalPrice += 3;
+        if (Pizza.Mushroom) Pizza.FinalPrice += 3;
+        if (Pizza.Pineapple) Pizza.FinalPrice += 3;
+        if (Pizza.Ham) Pizza.FinalPrice += 3;
+        if (Pizza.Beef) Pizza.FinalPrice += 5;
 
         return RedirectToPage("/Checkout/Checkout", new
         {
-            Pizza.PizzaName,
-            BasePrice,
-            PizzaPrice
+            Pizza
         });
     }
 }

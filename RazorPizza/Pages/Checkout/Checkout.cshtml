@@ -3,14 +3,14 @@
 
 <div class="BG-Pizza flex flex-col items-center min-h-screen pt-20">
     <div class="flex flex-col max-w-md p-6 space-y-4 divide-y sm:w-96 sm:p-10 divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
-        <h2 class="text-2xl font-semibold">@Model.PizzaName</h2>
+        <h2 class="text-2xl font-semibold">@Model.Pizza.PizzaName</h2>
         <ul class="flex flex-col pt-4 space-y-2">
             <li class="flex items-start justify-between">
                 <h3>
                     Pizza Base
                 </h3>
                 <div class="text-right">
-                    <span class="block">$@Model.BasePrice</span>
+                    <span class="block">$@Model.Pizza.BasePrice</span>
                 </div>
             </li>
 
@@ -79,7 +79,7 @@
             <div class="space-y-6">
                 <div class="flex justify-between">
                     <span>Total</span>
-                    <span class="font-semibold">$@Model.PizzaPrice</span>
+                    <span class="font-semibold">$@Model.Pizza.FinalPrice</span>
                 </div>
                 <a asp-page="Thanks" class="w-full py-2 font-semibold border rounded dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400">Go to checkout</a>
             </div>
