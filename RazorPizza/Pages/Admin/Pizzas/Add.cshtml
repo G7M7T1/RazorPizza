@@ -1,0 +1,133 @@
+@page
+@model PizzaClub.Web.Pages.Admin.Pizzas.Add
+
+
+<div class="Other-BG-2 flex flex-col items-center">
+    <div class="container pt-20 pb-6 w-full">
+        <h1 class="text-red-600 text-5xl font-extrabold text-center Main-Title pb-3 Text-Shadow-White">
+            Create Pizza
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="mx-auto max-w-4xl">
+            <form method="post" class="mt-6 mb-32 space-y-4 rounded-lg p-8 shadow-2xl bg-black bg-opacity-50 text-white">
+
+                <div>
+                    <label class="text-sm font-medium">Pizza Name (Card)</label>
+                    <div class="relative mt-1">
+                        <input asp-for="AddPizzaInfoRequset.Heading" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Pizza Title (Page)</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input asp-for="AddPizzaInfoRequset.PageTitle" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Pizza Price</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input asp-for="AddPizzaInfoRequset.Price" step="0.01" type="number" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Short Description (Card)</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input asp-for="AddPizzaInfoRequset.ShortDescription" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Description (Page)</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <textarea asp-for="AddPizzaInfoRequset.Description" id="Description"></textarea>
+                    </div>
+                </div>
+
+                <div class="pb-6">
+                    <label class="block mb-2 text-sm font-medium text-white" for="file_input">Upload file</label>
+                    <input class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer focus:outline-none" id="file_input" type="file">
+                    
+                    <div class="flex justify-center items-center">
+                        <img id="ImageDisplay" src="" alt="Photo View" style="display: none;width: 300px">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="ImageUrl" class="text-sm font-medium">Image Url (Page & Card)</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input id="ImageUrl" asp-for="AddPizzaInfoRequset.ImageUrl" readonly type="text" class="mb-6 bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium">Page Url (Page)</label>
+
+                    <div class="relative mt-1 pb-6">
+                        <input asp-for="AddPizzaInfoRequset.UrlAddress" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                    </div>
+                </div>
+
+                <div class="flex items-center pl-4 rounded border border-gray-700">
+                    <input asp-for="AddPizzaInfoRequset.Visible" id="bordered-checkbox-1" type="checkbox" class="w-4 h-4 text-red-600 rounded bg-gray-700 border-gray-300">
+                    <label for="bordered-checkbox-1" class="py-4 ml-2 w-full text-sm font-medium text-gray-300">Visible</label>
+                </div>
+
+                <button
+                    type="submit"
+                    class="block w-full rounded-lg bg-red-600 px-5 py-6 text-sm font-medium text-white">
+                    Add Pizza
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        var editor = new FroalaEditor('#Description', {
+            imageUploadURL: "/api/images"
+        });
+
+        // Get Url Element and Upload Element
+        const UploadUrl = document.getElementById("ImageUrl")
+        const UploadElement = document.getElementById("file_input")
+        const UploadImageDisplay = document.getElementById("ImageDisplay")
+
+        async function uploadFeaturedImage(e) {
+            console.log(e.target.files[0]);
+
+            let data = new FormData();
+            data.append("file", e.target.files[0])
+
+            await fetch("/api/images", {
+                method: "POST",
+
+                headers: {
+                    "Accept": "*/*"
+                },
+
+                body: data
+
+            }).then(response => response.json())
+            .then(result => {
+                    UploadUrl.value = result.link
+                    UploadImageDisplay.src = result.link
+                    UploadImageDisplay.style.display = "block"
+            })
+        }
+
+        UploadElement.addEventListener("change", uploadFeaturedImage)
+
+    </script>
+}

@@ -1,9 +1,8 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home page";
 }
-
 
 <section class="text-white w-full Main-BG Text-Title">
     <div class="pt-20 pb-6">
@@ -23,7 +22,7 @@
                     <div class="mx-12">
                         <h1 class="font-black text-5xl pb-3">Cheeze Pizza</h1>
                         <h4 class="text-3xl pb-3">Pizza With Extra cheezzz</h4>
-                        <button class="rounded-lg text-white bg-red-600 py-2 px-4 font-medium">Order Now</button>
+                        <a href="/pizza" class="rounded-lg text-white bg-red-600 py-3 px-4 font-medium">Order Now</a>
                     </div>
                 </div>
 
@@ -55,7 +54,7 @@
 
             <div class="Make-Own mx-12 mt-1 mb-12 flex flex-col justify-center items-center">
                 <h1 class="font-black text-5xl Text-Shadow">Make Your Own Pizza With Us</h1>
-                <button class="rounded-lg px-12 py-3 bg-red-600 text-white mt-6">Try It Now</button>
+                <a href="/make/add" class="rounded-lg px-12 py-3 bg-red-600 text-white mt-6">Try It Now</a>
             </div>
 
             <div class="pt-20 pb-6 ">
@@ -68,7 +67,7 @@
                 </h4>
             </div>
 
-            <div class="Pizza-List grid sm:grid-cols-2 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
+            <div class="Pizza-List grid sm:grid-cols-1 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
 
                 <div class="flex justify-center">
                     <div class="max-w-xs rounded-xl shadow-md BG-Pizza">

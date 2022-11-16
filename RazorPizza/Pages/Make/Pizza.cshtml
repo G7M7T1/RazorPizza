@@ -1,0 +1,136 @@
+@page
+@model PizzaClub.Web.Pages.Make.Pizza
+
+<section class="text-white w-full Main-BG Text-Title min-h-screen">
+    <div class="flex justify-center">
+        <div class="max-w-screen-2xl w-full">
+            <div class="Make-Own mx-12 mt-16 mb-12 flex flex-col justify-center items-center">
+                <h1 class="font-black text-5xl Text-Shadow">Make Your Own Pizza With Us</h1>
+                <a href="/make/add" class="rounded-lg px-12 py-3 bg-red-600 text-white mt-6">Try It Now</a>
+            </div>
+
+            <div class="pt-20 pb-6 ">
+                <h1 class="text-red-600 text-5xl font-extrabold text-center Main-Title pb-3 Text-Shadow-White">
+                    Buy Our Popular Pizza
+                </h1>
+
+                <h4 class="text-white text-6xl font-extrabold text-center Main-Title Text-Shadow-Red">
+                    We Make Best Pizza In This World
+                </h4>
+            </div>
+
+            @foreach (var pizza in @Model.MakePizzas)
+            {
+                <div class="MakeList mx-12 mt-16 mb-12 bg-black bg-opacity-50 rounded-2xl px-6 py-6 flex justify-center">
+                    <div class="PizzaImageArea relative overflow-hidden">
+                        <img src="https://res.cloudinary.com/dacf2byit/image/upload/v1667573489/base_x9z5tv.webp" alt="Base Pizza">
+
+                        @if (pizza.ExtraCheese)
+                        {
+                            <img id="IExtraCheese" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/X_ivyofz.png" alt="Base Pizza">
+                        }
+
+                        @if (pizza.FetaCheese)
+                        {
+                            <img id="IFetaCheese" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/FC_rlab7i.png" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.GoatCheese)
+                        {
+                            <img id="IGoatCheese" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/GC_nta9ka.webp" alt="Base Pizza">   
+                        }
+                        
+                        @if (pizza.Broccoli)
+                        {
+                            <img id="IBroccoli" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/BR_oomgpz.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.RedPeppers)
+                        {
+                            <img id="IRedPeppers" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/RP_dqv1nm.png" alt="Base Pizza">   
+                        }
+                        
+                        @if (pizza.Mushrooms)
+                        {
+                            <img id="IMushrooms" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/FM_vayusd.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.GreenOlives)
+                        {
+                            <img id="IGreenOlives" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/GO_bz0lrh.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.GreenPeppers)
+                        {
+                            <img id="IGreenPeppers" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/GP_x0ttf7.png" alt="Base Pizza">   
+                        }
+                        
+                        @if (pizza.RedOnions)
+                        {
+                            <img id="IRedOnions" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/O_abyceq.png" alt="Base Pizza">   
+                        }
+                        
+                        @if (pizza.Pineapple)
+                        {
+                            <img id="IPineapple" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/PI_dw8jsn.png" alt="Base Pizza">   
+                        }
+                        
+                        @if (pizza.Spinach)
+                        {
+                            <img id="ISpinach" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578965/S_nwxjgb.png" alt="Base Pizza">    
+                        }
+                        
+                        @if (pizza.Bacon)
+                        {
+                            <img id="IBacon" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/BS_rnroe3.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.ButterChicken)
+                        {
+                            <img id="IButterChicken" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/B9_v12wn8.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.GrilledChicken)
+                        {
+                            <img id="IGrilledChicken" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/CH_pdlsmy.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.GroundBeef)
+                        {
+                            <img id="IGroundBeef" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/GB_szaoch.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.ItalianHam)
+                        {
+                            <img id="IItalianHam" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/H_cpf5fk.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.Pepperoni)
+                        {
+                            <img id="IPepperoni" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/PO_ccllnp.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.Salami)
+                        {
+                            <img id="ISalami" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/SA_nohtga.webp" alt="Base Pizza">
+                        }
+                        
+                        @if (pizza.Sausage)
+                        {
+                            <img id="ISausage" class="absolute top-0 left-0" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/IS_zqvbwf.webp" alt="Base Pizza">
+                        }
+                    </div>
+
+                    <div class="InformationArea text-white flex flex-col">
+                        <h1 class="text-center mb-6">@pizza.PizzaName</h1>
+
+                        <div class="flex flex-row justify-center items-center">
+                            <button class="py-2 px-6 mx-3 bg-red-600 rounded-lg">$@pizza.FinalPrice</button>
+                            <a href="/make/delete/@pizza.Id" class="py-2 px-3 mx-3 bg-red-600 rounded-lg">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

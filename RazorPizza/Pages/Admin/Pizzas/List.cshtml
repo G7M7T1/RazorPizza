@@ -1,0 +1,54 @@
+@page
+@model PizzaClub.Web.Pages.Admin.Pizzas.List
+
+
+<div class="flex justify-center min-h-screen BG-Pizza">
+    <div class="container mt-32 mb-32">
+        <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th scope="col" class="py-3 px-6">
+                        Photo
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Product Name
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Short Desc
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Price
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var pizza in Model.PizzaList)
+                {
+                    <tr class="bg-white border-b hover:bg-gray-50">
+                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
+                            <img src="@pizza.ImageUrl" alt="Pizza Photo" style="max-width: 150px">
+                        </th>
+                        <td class="py-4 px-6">
+                            @pizza.Heading
+                        </td>
+                        <td class="py-4 px-6">
+                            @pizza.ShortDescription
+                        </td>
+                        <td class="py-4 px-6">
+                            @pizza.Price
+                        </td>
+                        <td class="py-4 px-6 text-right">
+                            <a href="/Admin/Pizzas/Edit/@pizza.Id" class="font-medium text-blue-600 hover:underline">Edit</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

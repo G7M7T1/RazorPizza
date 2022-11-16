@@ -1,5 +1,5 @@
 @page
-@model RazorPizza.Pages.Pizza
+@model PizzaClub.Web.Pages.Pizza
 
 @{
     ViewData["Title"] = "Pizza";
@@ -17,23 +17,22 @@
             </h4>
         </div>
 
-        <div class="Pizza-List grid sm:grid-cols-2 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
-            @foreach (var pizza in Model.fakePizzaDB)
+        <div class="Pizza-List grid sm:grid-cols-1 sm:mx-3 lg:grid-cols-3 lg:mx-8 xl:grid-cols-4 xl:mx-16 mb-12 mt-16 gap-6 items-center">
+            @foreach (var pizza in Model.PizzaList)
             {
                 <div class="flex justify-center">
                     <div class="max-w-xs rounded-xl shadow-md BG-Pizza">
-                        <img src="@pizza.ImageTitle" alt="" class="object-cover object-center w-full rounded-t-md h-72">
+                        <img src="@pizza.ImageUrl" alt="" class="object-cover object-center w-full rounded-t-md h-72">
                         <div class="flex flex-col justify-between p-6 space-y-8 bg-red-600 h-72 rounded-xl">
                             <div class="space-y-2">
-                                <h2 class="text-2xl font-semibold tracking-wide text-center">@pizza.PizzaName</h2>
-                                <p class="text-center">@pizza.Description</p>
+                                <h2 class="text-2xl font-semibold tracking-wide text-center">@pizza.Heading</h2>
+                                <p class="text-center">@pizza.ShortDescription</p>
                             </div>
-                            <a asp-area="" asp-page="Detail/Detail" asp-route-title="@pizza.PizzaName" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $@pizza.FinalPrice</a>
+                            <a href="#" class="flex items-center justify-center w-full p-3 font-bold tracking-wide rounded-md bg-white text-red-600">Only $@pizza.Price</a>
                         </div>
                     </div>
                 </div>
             }
         </div>
-
     </div>
 </section>

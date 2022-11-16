@@ -113,4 +113,31 @@
   box-sizing: border-box;
 }
 
+.MakeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.PizzaImageArea {
+  width: 45%;
+  min-width: 250px;
+}
+.PizzaImageArea img {
+  max-height: 340px;
+  max-width: 340px;
+}
+
+.InformationArea {
+  width: 45%;
+  min-width: 250px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.AddPizzaForm {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 /*# sourceMappingURL=style.css.map */

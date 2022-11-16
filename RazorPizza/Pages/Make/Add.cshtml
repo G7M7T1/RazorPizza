@@ -1,0 +1,270 @@
+@page
+@using PizzaClub.Web.Models.ViewModels
+@model PizzaClub.Web.Pages.Make.Add
+
+<div class="min-h-screen Main-BG flex flex-col items-center">
+    <div class="container">
+        <form method="post" class="AddPizzaForm rounded-3xl mt-16 mb-32">
+            <div class="grid grid-cols-2 gap-6 mx-6 py-6 px-6">
+
+                <div class="Img-Area flex justify-center items-center">
+                    <div class="relative">
+                        <img class="" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667573489/base_x9z5tv.webp" alt="Base Pizza">
+                        <img id="IExtraCheese" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/X_ivyofz.png" alt="Base Pizza">
+                        <img id="IFetaCheese" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/FC_rlab7i.png" alt="Base Pizza">
+                        <img id="IGoatCheese" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578269/GC_nta9ka.webp" alt="Base Pizza">
+
+                        <img id="IBroccoli" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/BR_oomgpz.webp" alt="Base Pizza">
+                        <img id="IRedPeppers" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/RP_dqv1nm.png" alt="Base Pizza">
+                        <img id="IMushrooms" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/FM_vayusd.webp" alt="Base Pizza">
+                        <img id="IGreenOlives" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/GO_bz0lrh.webp" alt="Base Pizza">
+                        <img id="IGreenPeppers" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/GP_x0ttf7.png" alt="Base Pizza">
+                        <img id="IRedOnions" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/O_abyceq.png" alt="Base Pizza">
+                        <img id="IPineapple" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578964/PI_dw8jsn.png" alt="Base Pizza">
+                        <img id="ISpinach" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578965/S_nwxjgb.png" alt="Base Pizza">
+
+                        <img id="IBacon" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/BS_rnroe3.webp" alt="Base Pizza">
+                        <img id="IButterChicken" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/B9_v12wn8.webp" alt="Base Pizza">
+                        <img id="IGrilledChicken" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/CH_pdlsmy.webp" alt="Base Pizza">
+                        <img id="IGroundBeef" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/GB_szaoch.webp" alt="Base Pizza">
+                        <img id="IItalianHam" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/H_cpf5fk.webp" alt="Base Pizza">
+                        <img id="IPepperoni" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/PO_ccllnp.webp" alt="Base Pizza">
+                        <img id="ISalami" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/SA_nohtga.webp" alt="Base Pizza">
+                        <img id="ISausage" class="absolute top-0 left-0 hidden" src="https://res.cloudinary.com/dacf2byit/image/upload/v1667578983/IS_zqvbwf.webp" alt="Base Pizza">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mb-6">
+                        <label class="text-white">Pizza Name</label>
+                        <div class="relative mt-1">
+                            <input asp-for="AddMakePizza.PizzaName" type="text" class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"/>
+                        </div>
+                    </div>
+                    <p class="text-white pt-6">Pizza Cheese</p>
+                    <div class="flex flex-wrap pt-6">
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.ExtraCheese" id="ExtraCheese" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="ExtraCheese" class="py-4 ml-2 w-full text-sm font-medium text-white">ExtraCheese</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.FetaCheese" id="FetaCheese" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="FetaCheese" class="py-4 ml-2 w-full text-sm font-medium text-white">FetaCheese</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.GoatCheese" id="GoatCheese" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="GoatCheese" class="py-4 ml-2 w-full text-sm font-medium text-white">GoatCheese</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 mx-6 py-6 px-6">
+
+                <div>
+                    <h1 class="mb-6 text-white">Meat</h1>
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Bacon" id="Bacon" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Bacon" class="py-4 ml-2 w-full text-sm font-medium text-white">Bacon</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.ButterChicken" id="ButterChicken" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="ButterChicken" class="py-4 ml-2 w-full text-sm font-medium text-white">Butter Chicken</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.GrilledChicken" id="GrilledChicken" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="GrilledChicken" class="py-4 ml-2 w-full text-sm font-medium text-white">Grilled Chicken</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.GroundBeef" id="GroundBeef" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="GroundBeef" class="py-4 ml-2 w-full text-sm font-medium text-white">Ground Beef</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.ItalianHam" id="ItalianHam" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="ItalianHam" class="py-4 ml-2 w-full text-sm font-medium text-white">Italian Ham</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Pepperoni" id="Pepperoni" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Pepperoni" class="py-4 ml-2 w-full text-sm font-medium text-white">Pepperoni</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Salami" id="Salami" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Salami" class="py-4 ml-2 w-full text-sm font-medium text-white">Salami</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Sausage" id="Sausage" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Sausage" class="py-4 ml-2 w-full text-sm font-medium text-white">Sausage</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1 class="mb-6 text-white">Veggie</h1>
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Broccoli" id="Broccoli" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Broccoli" class="py-4 ml-2 w-full text-sm font-medium text-white">Broccoli</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.RedPeppers" id="RedPeppers" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="RedPeppers" class="py-4 ml-2 w-full text-sm font-medium text-white">Red Peppers</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Mushrooms" id="Mushrooms" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Mushrooms" class="py-4 ml-2 w-full text-sm font-medium text-white">Mushrooms</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.GreenOlives" id="GreenOlives" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="GreenOlives" class="py-4 ml-2 w-full text-sm font-medium text-white">Green Olives</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.GreenPeppers" id="GreenPeppers" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="GreenPeppers" class="py-4 ml-2 w-full text-sm font-medium text-white">Green Peppers</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.RedOnions" id="RedOnions" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="RedOnions" class="py-4 ml-2 w-full text-sm font-medium text-white">Red Onions</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Pineapple" id="Pineapple" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Pineapple" class="py-4 ml-2 w-full text-sm font-medium text-white">Pineapple</label>
+                        </div>
+
+                        <div class="flex items-center px-4 rounded-xl mb-6 mx-3 bg-red-600">
+                            <input asp-for="AddMakePizza.Spinach" id="Spinach" type="checkbox" class="w-4 h-4 text-red-600 rounded">
+                            <label for="Spinach" class="py-4 ml-2 w-full text-sm font-medium text-white">Spinach</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center pb-16">
+                <button type="submit" class="w-1/2 bg-red-600 text-white mb-16 py-3 rounded-lg">Make My Pizza</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        let ExtraCheese = document.getElementById("ExtraCheese")
+        let FetaCheese = document.getElementById("FetaCheese")
+        let GoatCheese = document.getElementById("GoatCheese")
+        
+        let Bacon = document.getElementById("Bacon")
+        let ButterChicken = document.getElementById("ButterChicken")
+        let GrilledChicken = document.getElementById("GrilledChicken")
+        let GroundBeef = document.getElementById("GroundBeef")
+        let ItalianHam = document.getElementById("ItalianHam")
+        let Pepperoni = document.getElementById("Pepperoni")
+        let Salami = document.getElementById("Salami")
+        let Sausage = document.getElementById("Sausage")
+        
+        
+        let Broccoli = document.getElementById("Broccoli")
+        let RedPeppers = document.getElementById("RedPeppers")
+        let Mushrooms = document.getElementById("Mushrooms")
+        let GreenOlives = document.getElementById("GreenOlives")
+        let GreenPeppers = document.getElementById("GreenPeppers")
+        let RedOnions = document.getElementById("RedOnions")
+        let Pineapple = document.getElementById("Pineapple")
+        let Spinach = document.getElementById("Spinach")
+        
+        // Cheese
+        ExtraCheese.addEventListener("change", () => {
+            document.getElementById("IExtraCheese").classList.toggle("hidden")
+        })
+        
+        FetaCheese.addEventListener("change", () => {
+            document.getElementById("IFetaCheese").classList.toggle("hidden")
+        })
+        
+        GoatCheese.addEventListener("change", () => {
+            document.getElementById("IGoatCheese").classList.toggle("hidden")
+        })
+        
+        // Veg
+        Broccoli.addEventListener("change", () => {
+            document.getElementById("IBroccoli").classList.toggle("hidden")
+        })
+        
+        RedPeppers.addEventListener("change", () => {
+            document.getElementById("IRedPeppers").classList.toggle("hidden")
+        })
+        
+        Mushrooms.addEventListener("change", () => {
+            document.getElementById("IMushrooms").classList.toggle("hidden")
+        })
+        
+        GreenOlives.addEventListener("change", () => {
+            document.getElementById("IGreenOlives").classList.toggle("hidden")
+        })
+        
+        GreenPeppers.addEventListener("change", () => {
+            document.getElementById("IGreenPeppers").classList.toggle("hidden")
+        })
+        
+        RedOnions.addEventListener("change", () => {
+            document.getElementById("IRedOnions").classList.toggle("hidden")
+        })
+        
+        Pineapple.addEventListener("change", () => {
+            document.getElementById("IPineapple").classList.toggle("hidden")
+        })
+        
+        Spinach.addEventListener("change", () => {
+            document.getElementById("ISpinach").classList.toggle("hidden")
+        })
+        
+        // Meat
+        Bacon.addEventListener("change", () => {
+            document.getElementById("IBacon").classList.toggle("hidden")
+        })
+        
+        ButterChicken.addEventListener("change", () => {
+            document.getElementById("IButterChicken").classList.toggle("hidden")
+        })
+        
+        GrilledChicken.addEventListener("change", () => {
+            document.getElementById("IGrilledChicken").classList.toggle("hidden")
+        })
+        
+        GroundBeef.addEventListener("change", () => {
+            document.getElementById("IGroundBeef").classList.toggle("hidden")
+        })
+        
+        ItalianHam.addEventListener("change", () => {
+            document.getElementById("IItalianHam").classList.toggle("hidden")
+        })
+        
+        Pepperoni.addEventListener("change", () => {
+            document.getElementById("IPepperoni").classList.toggle("hidden")
+        })
+        
+        Salami.addEventListener("change", () => {
+            document.getElementById("ISalami").classList.toggle("hidden")
+        })
+        
+        Sausage.addEventListener("change", () => {
+            document.getElementById("ISausage").classList.toggle("hidden")
+        })
+    </script>
+}
